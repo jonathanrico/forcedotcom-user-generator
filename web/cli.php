@@ -3,7 +3,13 @@
     Random User Generator CLI interface.
 */
 
-error_reporting(0);
+function echo_exception_handler($e) {
+  echo sprintf('Uncaught Exception %s: "%s" at %s line %s', get_class($e), $e->getMessage(), $e->getFile(), $e->getLine());
+}
+set_exception_handler('echo_exception_handler');
+
+$exception_log = new Logger('exception');
+
 require_once("Dataset.class.php");
 
 // Read in arguments
