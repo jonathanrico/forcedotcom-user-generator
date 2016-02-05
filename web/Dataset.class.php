@@ -59,7 +59,7 @@ class Dataset
             $current["gender"] = $this->lists["gender"][$i];
 
             $name = $this->randomName($this->lists["gender"][$i], $i);
-            $current["name"]["title"] = array("Customer Support Specialist", "Developer", "Brand Ambassador", "Account Executive", "Sales Engineer", "Business Development Manager", "Key Account Manager", "Sales Manager", "Territory Manager", "Regional Sales Executive" , "B2B Corporate Sales")[mt_rand(0, 12)];
+            $current["name"]["title"] = array("Customer Support Specialist", "Developer", "Brand Ambassador", "Account Executive", "Sales Engineer", "Business Development Manager", "Key Account Manager", "Sales Manager", "Territory Manager", "Regional Sales Executive" , "B2B Corporate Sales")[mt_rand(0, 11)];
             $current["name"]["first"] = $name[0];
             $current["name"]["last"]  = $name[1];
 
