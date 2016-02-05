@@ -1,7 +1,9 @@
 {
   "require" : {
     "monolog/monolog": "~1.7",
-    "php": "7.0.2"
+    "php": "7.0.2",
+    "ext-mbstring": "*",
+    "ext-gd": "*"
   },
   "require-dev": {
     "heroku/heroku-buildpack-php": "*"
