@@ -59,7 +59,7 @@ class Dataset
             $current["gender"] = $this->lists["gender"][$i];
 
             $name = $this->randomName($this->lists["gender"][$i], $i);
-            $current["name"]["title"] = $this->lists["gender"][$i] == "male" ? "mr" : array("miss", "mrs", "ms")[mt_rand(0, 2)];
+            $current["name"]["title"] = array("Customer Support Specialist", "Developer", "Brand Ambassador", "Account Executive", "Sales Engineer", "Business Development Manager", "Key Account Manager", "Sales Manager", "Territory Manager", "Regional Sales Executive" , "B2B Corporate Sales")[mt_rand(0, 12)];
             $current["name"]["first"] = $name[0];
             $current["name"]["last"]  = $name[1];
 
@@ -88,10 +88,8 @@ class Dataset
                 $genderText = "lego";
             }
 
-            $base = "https://randomuser.me/api/";
-            $current["picture"]["large"]     = $base . "portraits/" . $genderText . "/" . $id . ".jpg";
+            $base = "https://jrico-random-users.herokuapp.com/";
             $current["picture"]["medium"]    = $base . "portraits/med/" . $genderText . "/" . $id . ".jpg";
-            $current["picture"]["thumbnail"] = $base . "portraits/thumb/" . $genderText . "/" . $id . ".jpg";
 
             $inject::execute($current, "Dataset::random");  // Inject unique fields for nationality
 
@@ -179,7 +177,7 @@ class Dataset
     // Generates random hex string $length long
     public static function random($mode, $length) {
         $result = "";
-        
+
         if ($mode == 1) {
             $chars = "abcdef1234567890";
         } else if ($mode == 2) {
