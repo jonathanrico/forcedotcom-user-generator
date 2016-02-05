@@ -1,0 +1,6 @@
+{
+  "name": "Random User Generator",
+  "description": "A PHP app that generates random users",
+  "repository": "https://github.com/jonathanrico/forcedotcom-user-generator",
+  "addons": []
+}
