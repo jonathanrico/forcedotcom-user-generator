@@ -3,7 +3,7 @@
     Random User Generator web interface.
 */
 
-error_reporting(0);
+error_reporting(E_ALL);
 require_once("Dataset.class.php");
 
 header('content-type: text/plain; charset=utf-8');
