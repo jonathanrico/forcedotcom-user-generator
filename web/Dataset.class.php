@@ -88,7 +88,8 @@ class Dataset
                 $genderText = "lego";
             }
 
-            $base = "https://jrico-random-users.herokuapp.com/";
+            $my_app_name = getenv('APP_NAME');
+            $base = "https://".$my_app_name.".herokuapp.com/";
             $current["picture"]["medium"]    = $base . "portraits/med/" . $genderText . "/" . $id . ".jpg";
 
             $inject::execute($current, "Dataset::random");  // Inject unique fields for nationality
